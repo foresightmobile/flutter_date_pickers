@@ -339,6 +339,7 @@ class _MonthPicker extends StatelessWidget {
       } else if (currentDate.year == year && currentDate.month == month) {
         // The current month gets a different text color.
         itemStyle = datePickerStyles.currentDateStyle;
+        decoration = datePickerStyles.currentDateDecoration;
       } else {
         itemStyle = datePickerStyles.defaultDateTextStyle;
       }

@@ -276,6 +276,7 @@ class DayCell extends StatelessWidget {
     } else if (DatePickerUtils.sameDate(currentDate, day)) {
       // The current day gets a different text color.
       itemStyle = datePickerStyles.currentDateStyle;
+      decoration = datePickerStyles.currentDateDecoration;
     } else {
       itemStyle = datePickerStyles.defaultDateTextStyle;
     }

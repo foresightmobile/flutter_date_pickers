@@ -17,6 +17,8 @@ class DatePickerStyles {
 
   final TextStyle selectedDateStyle;
 
+  final BoxDecoration currentDateDecoration;
+
   /// Used for date which is neither current nor disabled nor selected.
   final TextStyle defaultDateTextStyle;
 
@@ -58,6 +60,7 @@ class DatePickerStyles {
     this.selectedSingleDateDecoration,
     this.defaultDateTextStyle,
     this.dayHeaderStyleBuilder,
+    this.currentDateDecoration,
     this.dayHeaderStyle,
     this.firstDayOfeWeekIndex,
     Widget prevIcon,
@@ -90,6 +93,10 @@ class DatePickerStyles {
             BoxDecoration(
                 color: accentColor,
                 borderRadius: const BorderRadius.all(Radius.circular(10.0)));
+    BoxDecoration _currentDateDecoration = _currentDateStyle ?? BoxDecoration(
+      color: accentColor,
+      borderRadius: BorderRadius.circular(10.0)
+    );
 
     DayHeaderStyle _dayHeaderStyle;
     if (dayHeaderStyleBuilder == null) {
@@ -104,6 +111,7 @@ class DatePickerStyles {
         selectedSingleDateDecoration: _selectedSingleDateDecoration,
         defaultDateTextStyle: _defaultDateTextStyle,
         dayHeaderStyle: _dayHeaderStyle,
+        currentDateDecoration: _currentDateDecoration,
         dayHeaderStyleBuilder: dayHeaderStyleBuilder,
         nextIcon: nextIcon,
         prevIcon: prevIcon
@@ -127,6 +135,7 @@ class DatePickerStyles {
         && other.dayHeaderStyleBuilder == dayHeaderStyleBuilder
         && other.prevIcon == prevIcon
         && other.nextIcon == nextIcon
+        && other.currentDateDecoration == currentDateDecoration
         && other.firstDayOfeWeekIndex == firstDayOfeWeekIndex;
   }
 
@@ -143,7 +152,8 @@ class DatePickerStyles {
         dayHeaderStyleBuilder,
         prevIcon,
         nextIcon,
-        firstDayOfeWeekIndex
+        firstDayOfeWeekIndex,
+        currentDateDecoration
     );
   }
 
@@ -241,6 +251,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
         dayHeaderStyle: commonStyles.dayHeaderStyle,
         dayHeaderStyleBuilder: commonStyles.dayHeaderStyleBuilder,
         firstDayOfWeekIndex: firstDayOfeWeekIndex,
+        currentDateDecoration: commonStyles.currentDateDecoration,
         selectedPeriodStartDecoration: _selectedPeriodStartDecoration,
         selectedPeriodMiddleDecoration: _selectedPeriodMiddleDecoration,
         selectedPeriodLastDecoration: _selectedPeriodLastDecoration,
@@ -259,6 +270,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
     defaultDateTextStyle,
     dayHeaderStyle,
     dayHeaderStyleBuilder,
+    currentDateDecoration,
     nextIcon,
     prevIcon,
     firstDayOfWeekIndex,
@@ -275,6 +287,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
             selectedDateStyle: selectedDateStyle,
             selectedSingleDateDecoration: selectedSingleDateDecoration,
             defaultDateTextStyle: defaultDateTextStyle,
+            currentDateDecoration: currentDateDecoration,
             dayHeaderStyle: dayHeaderStyle,
             dayHeaderStyleBuilder: dayHeaderStyleBuilder,
             nextIcon: nextIcon,
@@ -305,6 +318,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
         && other.dayHeaderStyleBuilder == dayHeaderStyleBuilder
         && other.prevIcon == prevIcon
         && other.nextIcon == nextIcon
+        && other.currentDateDecoration == currentDateDecoration
         && other.firstDayOfeWeekIndex == firstDayOfeWeekIndex;
   }
 
@@ -327,7 +341,8 @@ class DatePickerRangeStyles extends DatePickerStyles {
       dayHeaderStyleBuilder,
       prevIcon,
       nextIcon,
-      firstDayOfeWeekIndex
+      firstDayOfeWeekIndex,
+      currentDateDecoration,
     );
   }
 }
