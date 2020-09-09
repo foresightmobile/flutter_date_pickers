@@ -93,7 +93,7 @@ class DatePickerStyles {
             BoxDecoration(
                 color: accentColor,
                 borderRadius: const BorderRadius.all(Radius.circular(10.0)));
-    BoxDecoration _currentDateDecoration = _currentDateStyle ?? BoxDecoration(
+    BoxDecoration _currentDateDecoration = currentDateDecoration ?? BoxDecoration(
       color: accentColor,
       borderRadius: BorderRadius.circular(10.0)
     );
