@@ -32,7 +32,7 @@ class DayBasedPicker<T> extends StatelessWidget with CommonDatePickerFunctions {
   final Key selectedPeriodKey;
 
   /// Styles what can be customized by user
-  final DatePickerRangeStyles datePickerStyles;
+  final DatePickerStyles datePickerStyles;
 
   /// Builder to get event decoration for each date.
   ///
