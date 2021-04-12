@@ -38,7 +38,7 @@ class DayBasedChangeablePicker<T> extends StatefulWidget {
   final DatePickerLayoutSettings datePickerLayoutSettings;
 
   /// Styles what can be customized by user
-  final DatePickerRangeStyles datePickerStyles;
+  final DatePickerStyles datePickerStyles;
 
   /// Some keys useful for integration tests
   final DatePickerKeys datePickerKeys;
