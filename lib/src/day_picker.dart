@@ -91,7 +91,7 @@ class DayPicker extends StatelessWidget {
       lastDate: lastDate,
       onChanged: onChanged,
       datePickerLayoutSettings: datePickerLayoutSettings,
-      datePickerStyles: datePickerStyles ?? DatePickerStyles(),
+      datePickerStyles: datePickerStyles ?? DatePickerRangeStyles(),
       datePickerKeys: datePickerKeys,
       eventDecorationBuilder: eventDecorationBuilder,
       onMonthChanged: onMonthChanged,

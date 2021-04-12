@@ -38,7 +38,7 @@ class DayBasedChangeablePicker<T> extends StatefulWidget {
   final DatePickerLayoutSettings datePickerLayoutSettings;
 
   /// Styles what can be customized by user
-  final DatePickerStyles datePickerStyles;
+  final DatePickerRangeStyles datePickerStyles;
 
   /// Some keys useful for integration tests
   final DatePickerKeys datePickerKeys;
@@ -87,7 +87,7 @@ class _DayBasedChangeablePickerState<T>
   DateTime _todayDate;
 
   // Styles from widget fulfilled with current Theme.
-  DatePickerStyles _resultStyles;
+  DatePickerRangeStyles _resultStyles;
   Timer _timer;
   PageController _dayPickerController;
   StreamSubscription<T> _changesSubscription;
